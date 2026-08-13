@@ -376,7 +376,7 @@ img {
 .modal {
   position: relative;
   background-color: #FCFCFC;
-  min-height: 584px;
+  height: 586px;
   border-radius: 4px;
   width: 408px;
   margin: 0;
