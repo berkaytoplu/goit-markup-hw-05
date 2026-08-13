@@ -40,7 +40,7 @@ body {
 
 .sections-style {
   background-color: #f4f4fd;
-  width: 1440px;
+  max-width: 1440px;
   height: 780px;
   margin: 0 auto;
 }
@@ -161,7 +161,7 @@ h3 {
 .footer-style {
   background-color: #2e2f42;
   padding-top: 100px;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   height: 312px;
 }
@@ -170,8 +170,6 @@ h3 {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0 159px 0 156px;
-  width: 100%;
 }
 
 .footer-left {
@@ -246,7 +244,7 @@ img {
   height: 100%;
   margin-bottom: 120px;
   margin-top: 120px;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -426,7 +424,6 @@ img {
 
 .form-field {
   margin-bottom: 8px;
-  height: 58px;
 }
 
 .form-field-textarea {
@@ -458,21 +455,15 @@ img {
   --color1: #4D5AE5;
 }
 
-.modal-label, .modal-label-name {
+.modal-label,
+.modal-label-name {
   color: #8E8F99;
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
   letter-spacing: 4%;
-  display: inline-block;
-  height: 14px;
-  width: 100%;
+  display: block;
   margin-bottom: 4px;
-  margin-top: 8px;
-}
-
-.modal-label-name {
-  margin-top: 0px;
 }
 
 .input-wrapper {
@@ -488,16 +479,24 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   resize: none;
-  padding: 8px 16px 8px 16px;
-  color: rgba(46, 47, 66, 0.4);
+  padding: 8px 16px;
+  color: #2e2f42;
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
   letter-spacing: 4%;
 }
 
+.modal-comment::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-comment:focus {
+  outline: none;
+  border-color: #4D5AE5;
+}
+
 .checkbox-label {
-  height: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -506,12 +505,15 @@ img {
 
 .checkbox-text {
   font-size: 12px;
-  line-height:14px;
-  height: 16px;
+  line-height: 14px;
   font-weight: 400;
   letter-spacing: 4%;
   color: #8E8F99;
-  min-width: 338px;
+}
+
+.checkbox-text a {
+  color: #4d5ae5;
+  text-decoration: underline;
 }
 
 .modal-checkbox {
@@ -537,6 +539,7 @@ img {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .send-button:hover {
